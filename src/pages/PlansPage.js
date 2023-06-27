@@ -18,7 +18,6 @@ const PlansPage = () => {
       setIsLoading(true);
       try {
         const result = await axios.get('/user/1');
-        console.log(result.data);
         setUser(result.data);
       } catch (error) {
         console.log(error);
@@ -41,7 +40,7 @@ const PlansPage = () => {
             {
               user.plans.map((plan) => (
                 <ButtonProfilePlan
-                  key={user.id}
+                  key={plan.id}
                   title={plan.title}
                   expiration={dateFormat(plan.UserPlanModel.expiration)}
                 />

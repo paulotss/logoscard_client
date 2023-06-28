@@ -41,6 +41,7 @@ const PlansPage = () => {
               user.plans.map((plan) => (
                 <ButtonProfilePlan
                   key={plan.id}
+                  id={plan.id}
                   title={plan.title}
                   expiration={dateFormat(plan.UserPlanModel.expiration)}
                 />

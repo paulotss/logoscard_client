@@ -18,7 +18,7 @@ const HomePage = () => {
             <ButtonSection
               title="Meus planos"
               image={ <HiUser /> }
-              path="/plans"
+              path="/plan/5"
             />
           </div>
           <div className="m-2">

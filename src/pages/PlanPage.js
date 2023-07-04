@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "../http";
 import Header from "../components/Header";
 import loading from "../media/isLoading.gif";
@@ -54,15 +54,14 @@ const PlanPage = () => {
                   user.assignment.benefits.map((benefit) => {
                     if (benefit.type === "active") {
                       return (
-                        <Link
-                          to={`/benefit/${benefit.id}`}
+                        <div
                           key={benefit.id}
                           className="grid grid-gap grid-cols-3 grid-rows-1 bg-gray-400 rounded-lg p-2 mb-2"
                         >
                           <div>{benefit.title}</div>
                           <div className="text-right">{benefit.amount}</div>
                           <div className="text-right">{benefit.AssignmentBenefitModel.amount}</div>
-                        </Link>
+                        </div>
                       )
                     }
                   })
@@ -77,12 +76,11 @@ const PlanPage = () => {
                   user.assignment.benefits.map((benefit) => {
                     if (benefit.type === "passive") {
                       return (
-                        <Link
-                          to={`/benefit/${benefit.id}`}
+                        <div
                           key={benefit.id}
                         >
                           <div className="bg-gray-400 rounded-lg p-2 mb-2">{benefit.title}</div>
-                        </Link>
+                        </div>
                       )
                     }
                   })

@@ -1,3 +1,5 @@
+// import { useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import ButtonSection from "../components/ButtonSection";
 import ButtonPlan from "../components/ButtonPlan";
@@ -8,7 +10,22 @@ import imgSeraphisPremium from '../media/seraphis-premium.png';
 import imgMaatPremium from '../media/maat-premium.png';
 import imgMaatSeraphisPremium from '../media/ms-gold.png';
 
+// const jwt = require('jsonwebtoken');
+
 const HomePage = () => {
+  // const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   try {
+  //     const key = process.env.REACT_APP_JWT_TOKEN;
+  //     const auth = sessionStorage.getItem('auth');
+  //     jwt.verify(auth, key);
+  //   } catch (error) {
+  //     console.log(error);
+  //     navigate("/login");
+  //   }
+  // }, [navigate]);
+
   return (
     <>
       <Header />

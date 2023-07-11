@@ -20,11 +20,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <ProfilePage />
+    element: <RouteGuard><ProfilePage /></RouteGuard>
   },
   {
     path: "/card",
-    element: <CardPage />
+    element: <RouteGuard><CardPage /></RouteGuard>
   },
   {
     path: "/login",
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/plan/:id",
-    element: <PlanPage />
+    element: <RouteGuard><PlanPage /></RouteGuard>
   }
 ]);
 

@@ -17,7 +17,8 @@ const LoginPage = () => {
   }
 
   return (
-    <main className="flex justify-center h-screen">
+    <main className="flex flex-col h-screen">
+      <h1 className="font-bold ml-20 mt-20 mb-3 text-2xl">Login</h1>
       <Formik
         initialValues={{
           email: "",
@@ -33,7 +34,7 @@ const LoginPage = () => {
           formik => (
             <form
               onSubmit={formik.handleSubmit}
-              className="p-3 w-96 h-fit border mt-20"
+              className="p-3 w-96 h-fit border ml-20"
             >
               <div className="mb-3">
                 <label htmlFor="email">Email</label>
